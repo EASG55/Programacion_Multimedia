@@ -8,7 +8,7 @@ fun main() {
 
 class Ejercicio2 {
 
-    // Excepción personalizada (Ahora es una clase anidada dentro de Ejercicio2)
+    // Excepción personalizada
     class TemperaturaInvalidaException(mensaje: String) : Exception(mensaje)
 
     fun menuInteractivo() {

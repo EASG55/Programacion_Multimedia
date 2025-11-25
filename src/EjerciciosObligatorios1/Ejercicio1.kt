@@ -8,7 +8,7 @@ data class Libro(
 )
 
 fun main() {
-    // 2. Crear lista de libros
+    // Crear lista de libros
     val biblioteca = listOf(
         Libro("Cien años de soledad", "Gabriel Garcia Marquez", 1967, true),
         Libro("1984", "George Orwell", 1949, false),
@@ -31,25 +31,25 @@ fun main() {
     calcularEstadisticas(biblioteca)
 }
 
-// 3. Implementar buscarPorAutor
+// Implementar buscarPorAutor
 fun buscarPorAutor(libros: List<Libro>, autor: String): List<Libro> {
     // Filtramos la lista comparando el autor ignorando mayúsculas y minúsculas
     return libros.filter { it.autor.equals(autor, ignoreCase = true) }
 }
 
-// 4. Implementar buscarPorAnio
+// Implementar buscarPorAnio
 fun buscarPorAnio(libros: List<Libro>, inicio: Int, fin: Int): List<Libro> {
     // Usamos un rango para verificar si el año está dentro de los límites
     return libros.filter { it.anioPublicacion in inicio..fin }
 }
 
-// 5. Implementar librosDisponibles
+// Implementar librosDisponibles
 fun librosDisponibles(libros: List<Libro>): List<Libro> {
     // Retorna solo los libros donde el atributo disponible es true
     return libros.filter { it.disponible }
 }
 
-// 6. Implementar calcularEstadisticas
+// Implementar calcularEstadisticas
 fun calcularEstadisticas(libros: List<Libro>) {
     val totalLibros = libros.size
     // Agrupamos por autor para contar cuantos libros tiene cada uno
